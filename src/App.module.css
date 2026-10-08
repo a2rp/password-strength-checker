@@ -74,7 +74,7 @@
     background: var(--ink);
     font-size: 10px;
     font-weight: 700;
-    transition: background-color 150ms ease, box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
   }
   .primaryLink:hover {
     background: #3b3931;
