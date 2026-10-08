@@ -18,7 +18,7 @@ const PasswordChecker = () => {
   return (
     <section className={styles.checker} id="studio" aria-labelledby="checker-title">
       <div className={styles.toolIntro}>
-        <p className={styles.eyebrow}>PASSWORD / FIELD TEST</p>
+        <p className={styles.sectionLabel}>PASSWORD / FIELD TEST</p>
         <h2 id="checker-title">Check the strength.</h2>
         <p>Enter a password to see a quick estimate and a few practical ways to improve it.</p>
       </div>
@@ -37,7 +37,7 @@ const PasswordChecker = () => {
         </div>
         <div className={styles.resultPanel} aria-live="polite">
           <div className={styles.resultTop}><span>STRENGTH ESTIMATE</span><span className={styles.statusDot} /></div>
-          <div className={styles.scoreRow}><strong className={levelClasses[result.score]}>{result.label}</strong><span>{result.checked ? `${result.score + 1} / 5` : "—"}</span></div>
+          <div className={styles.scoreRow}><strong className={levelClasses[result.score]}>{result.label}</strong><span>{result.checked ? `${result.score + 1} / 5` : "-"}</span></div>
           <div className={styles.meter} role="progressbar" aria-label="Password strength estimate" aria-valuemin="0" aria-valuemax="4" aria-valuenow={result.score}>
             {Array.from({ length: 5 }, (_, index) => <span className={index <= result.score && result.checked ? levelClasses[result.score] : ""} key={index} />)}
           </div>

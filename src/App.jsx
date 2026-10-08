@@ -6,19 +6,19 @@ import SiteHeader from "./components/siteHeader/index.jsx";
 import styles from "./App.module.css";
 
 const App = () => (
-  <div className={styles.page} id="top">
+  <div className={styles.appShell} id="top">
     <SiteHeader />
     <main>
       <section className={styles.hero} aria-labelledby="hero-title">
         <div className={styles.heroCopy}>
-          <p className={styles.kicker}><span /> A private first look at password strength</p>
+          <p className={styles.contextLabel}><span /> A private first look at password strength</p>
           <h1 id="hero-title">A little harder<br />to <em>guess.</em></h1>
           <p className={styles.intro}>Get a quick, practical strength estimate without sending your password anywhere. Your keystrokes stay in this tab.</p>
           <div className={styles.heroActions}><a className={styles.primaryLink} href="#studio">Check a password <FiArrowDown aria-hidden="true" /></a><span><FiLock aria-hidden="true" /> Local check · Nothing saved</span></div>
           <div className={styles.heroLine}><span className={styles.lineNumber}>FIELD NOTE 001</span><span className={styles.lineRule} /><span>LONGER IS A GOOD PLACE TO START</span></div>
         </div>
         <div className={styles.heroCard} aria-label="Illustration showing privacy and a strength indicator" role="img">
-          <div className={styles.cardHeader}><span>STRENGTH / SIGNAL</span><span>01 — 05</span></div>
+          <div className={styles.cardHeader}><span>STRENGTH / SIGNAL</span><span>01 - 05</span></div>
           <div className={styles.emblem}><div className={`${styles.orbit} ${styles.orbitOuter}`} /><div className={`${styles.orbit} ${styles.orbitInner}`} /><div className={styles.shield}><FiShield aria-hidden="true" /><FiZap aria-hidden="true" /></div></div>
           <div className={styles.cardMeter}><span /><span /><span /><span /><span /></div>
           <div className={styles.cardFooter}><div><span>YOUR PASSWORD</span><b>NEVER LEAVES THIS TAB</b></div><FiLock aria-hidden="true" /></div>
@@ -28,7 +28,7 @@ const App = () => (
       </section>
       <PasswordChecker />
       <section className={styles.guide} id="guide" aria-labelledby="guide-title">
-        <div className={styles.guideIntro}><p className={styles.kicker}>HOW THE ESTIMATE WORKS</p><h2 id="guide-title">Helpful feedback, with honest limits.</h2><p>Length and variety can make guessing harder. This quick estimate looks for a few familiar patterns so you can improve a password before you use it.</p></div>
+        <div className={styles.guideIntro}><p className={styles.contextLabel}>HOW THE ESTIMATE WORKS</p><h2 id="guide-title">Helpful feedback, with honest limits.</h2><p>Length and variety can make guessing harder. This quick estimate looks for a few familiar patterns so you can improve a password before you use it.</p></div>
         <div className={styles.guideGrid}>
           <article><span>01 / LENGTH</span><h3>Give it more room</h3><p>Longer passwords and passphrases tend to offer more combinations to guess. Aim for 12 or more characters.</p></article>
           <article><span>02 / PATTERNS</span><h3>Skip the obvious</h3><p>Common password words, keyboard walks, and long runs of the same character lower this estimate.</p></article>

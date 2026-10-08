@@ -1,4 +1,4 @@
-﻿import { FiGithub, FiShield } from "react-icons/fi";
+import { FiGithub, FiShield } from "react-icons/fi";
 import styles from "./styles.module.css";
 
 const SiteHeader = () => (
